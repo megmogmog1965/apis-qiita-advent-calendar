@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { JSDOM } from 'jsdom'
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 export async function GET(
   request: Request,  // eslint-disable-line @typescript-eslint/no-unused-vars
