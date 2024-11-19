@@ -1,2 +1,17 @@
 # apis-qiita-advent-calendar
-APIs for Qiita Advent Calendar.
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## APIs
+
+| API | Description |
+|:--- |:--- |
+| `/api/calendar/[year]/[name]` | Get the `application/json` content of the Advent Calendar page. |
