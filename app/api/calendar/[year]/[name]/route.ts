@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { JSDOM } from 'jsdom'
 
 // 3 minutes response cache.
-export const revalidate = 3 * 60
+export const revalidate = 180
 
 export async function GET(
   request: Request,  // eslint-disable-line @typescript-eslint/no-unused-vars
