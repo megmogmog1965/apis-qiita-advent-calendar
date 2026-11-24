@@ -17,7 +17,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.5",
     "@types/jsdom": "^30.0.0",
-    "@types/node": "^24.19.2",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
@@ -25,5 +25,8 @@
     "postcss": "^8.5.33",
     "tailwindcss": "^4.3.5",
     "typescript": "~6.0.3"
+  },
+  "engines": {
+    "node": "26.x"
   }
 }
