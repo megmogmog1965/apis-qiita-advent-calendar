@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { JSDOM } from 'jsdom'
+import { parse } from 'node-html-parser'
 
 // 3 minutes response cache.
 export const revalidate = 180
@@ -38,17 +38,16 @@ function getQiitaAdventCalendarUrl(year: string, name: string) {
 }
 
 function textContent(html: string, selector: string) {
-  const dom = new JSDOM(html)
-  const document = dom.window.document
-
-  const element = document.querySelector(selector)
+  const element = parse(html).querySelector(selector)
   if (!element) {
     throw new Error('Element not found')
   }
 
-  if (!element.textContent) {
+  // <script> の中身はエンティティを解釈しない生のテキストなので、rawText を使う（jsdom の textContent と同じ値）
+  const text = element.rawText
+  if (!text) {
     throw new Error('Element text content not found')
   }
 
-  return element.textContent
+  return text
 }
