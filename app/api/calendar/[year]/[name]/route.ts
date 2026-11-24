@@ -5,8 +5,8 @@ import { JSDOM } from 'jsdom'
 export const revalidate = 180
 
 export async function GET(
-  request: Request,  // eslint-disable-line @typescript-eslint/no-unused-vars
-  { params }: { params: Promise<{ year: string; name: string }> }
+  request: Request,
+  { params }: { params: Promise<{ year: string; name: string }> },
 ) {
   const { year, name } = await params
 
